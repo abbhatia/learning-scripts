@@ -1,0 +1,4 @@
+############ KAFKA produce and consume with security
+
+kafka-topics --create --zookeeper ${ZK} --topic ${topicName} --partitions 1 --replication-factor 1 --config retention.ms=$RETENTION_MS -if-not-exists
+kafka-console-producer --broker-list "$BR" --topic "test-topic" --producer.config /opt/spinal/conf/client.properties
